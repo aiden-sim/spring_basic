@@ -47,4 +47,6 @@ public class SpringConfig {
 - JPA
   - JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환을 할 수 있다.
 
+- AOP
+  - 공통 관심 사항 vs 핵심 관심 사항 분리
 
