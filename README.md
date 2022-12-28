@@ -30,9 +30,23 @@ public class SpringConfig {
 }
 ```
   - 이렇게 사용하면 Service나 Repository 부분을 수정하지 않고 설정만 변경해서 주입대상을 변경시킬 수 있다.
+  - Repository를 참조하는 Service가 여러개인 경우, Config 설정만 변경해서 관리할 수 있다.
 
 
 - 기본적으로 `@SpringBootApplication` 내부에 있는 `@ComponentScan`을 통해 하위 패키지를 찾아서 자동으로 스프링 빈으로 등록시킨다.
 
 - `@Autowired` 의 setter 주입 방식은 public 하게 제공되기 때문에 중간에 변경될 소지가 있어 권장하지 않는다.
+
+- 스프링의 DI (Dependencies Injection)을 사용하면 기존 코드를 전혀 손대지 않고, 설정만으로 구현 클래스를 변경할 수 있다.
+
+- 통합 테스트
+  - `@SpringBootTest` : 스프링 컨테이너와 테스트를 함께 실행한다.
+  - `@Transactional` : 테스트 케이스에 이 애노테이션이 있으면, 테스트 시작 전에 트랜잭션을 시작하고, 테스트 완료 후에 항상 롤백한다. 이렇게 하면 DB에 데이터가 남지 않으므로 다음 테스트에 영향을 주지 않는다.
+
+
+- JPA
+  - JPA를 사용하면, SQL과 데이터 중심의 설계에서 객체 중심의 설계로 패러다임을 전환을 할 수 있다.
+
+- 
+
 
